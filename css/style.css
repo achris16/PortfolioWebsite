@@ -31,7 +31,7 @@ img {
 }
 
 /* Navbar */
-.navbar {
+/* .navbar {
   background: #fff;
   padding: 20px;
 }
@@ -63,11 +63,12 @@ img {
 
 .navbar ul li:last-child a {
   margin-left: 10px;
-}
+} */
 
 /* Hero */
 .hero {
   margin-left: 50px;
+  padding-top: 60px;
 }
 
 .hero .container {
