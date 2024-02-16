@@ -1,5 +1,3 @@
-let navItems;
-
 function navItemClick(e) {
   // console.log(e);
   if (e.target.tagName.toLowerCase() === 'a' && !e.target.classList.contains('active')) {
@@ -38,8 +36,8 @@ function setFirstActiveLink() {
 
 window.onload = (event) => {
   console.log("page is fully loaded");
-  setFirstActiveLink();  
-  navItems = document.querySelectorAll('.nav-item');
+  setFirstActiveLink();
+  const navItems = document.querySelectorAll('.nav-item');
   for (item of navItems) {
     item.addEventListener('click', navItemClick);
   }
