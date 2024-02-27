@@ -6,7 +6,7 @@
 
 :root {
   --primary-color: #4891ff;
-  --light-color: #f4f4f6;
+  --light-color: #adadad;
   --dark-color: #111;
 }
 
@@ -65,25 +65,41 @@ img {
   margin-left: 10px;
 } */
 
+section#about, section#portfolio {
+  background-color: var(--bs-gray-200);
+}
+
 /* Hero */
+/* .hero:first-of-type {
+  padding-top: 2.5rem;
+} */
+
 .hero {
-  margin-left: 50px;
-  padding-top: 60px;
+  padding-left: 2em;
+  padding-top: 5rem;
 }
 
 .hero .container {
-  background: url(..images/) no-repeat;
+  /* background: url(..images/) no-repeat; */
   background-size: contain;
   background-position: center bottom;
-  height: 550px; 
+  /* Needs to be variable based on screen size */
+  min-height: 90vh; 
+}
+
+/* Needs to be variable based on screen size */
+@media (max-width: 574px) {
+  .hero .container {
+    min-height: 92vh;
+  }
 }
 
 .hero .hero-content {
-  width: 70%;  
+  width: 80%;  
 }
 
 .hero .hero-text {
-  width: 70%;
+  width: 80%;
   margin-bottom: 20px; 
 }
    
@@ -102,20 +118,25 @@ img {
 
 /* Buttons */
 .btn {
+  color: var(--bs-body-color);
+  background: var(--bs-light);
+  font: 16px/30px opensans-bold,sans-serif;
   display: inline-block;
-  padding: 13px 20px;
-  background: var(--light-color);
-  color: #333;
-  font-weight: 600;
   text-decoration: none;
+  letter-spacing: 0;
+  padding: 12px 20px;
+  margin-bottom: 18px;
   border: none;
-  border-radius: 10px;
   cursor: pointer;
-  transition: 0.5s;
+  height: auto;
+  transition: all .5s ease-in-out;
+  border-radius: 10px;
 }
 
 .btn:hover {
   opacity: 0.8;
+  color: var(--bs-light);
+  background-color: var(--bs-body-color);;
 }
 
 .btn--primary {
@@ -170,8 +191,39 @@ img {
 }
 
 /* Background */
-.bg-primary { 
+/* .bg-primary { 
   background: var
-}
+} */
 
 /* 52:49 */
+
+
+.offcanvas-end {
+  width: 65vw;
+}
+
+
+
+@media (min-width: 575px) {
+  .name-tag-small-min {
+    display: none;
+  }
+}
+
+@media (max-width: 574px) {
+  .name-tag-small-max {
+    display: none;
+  }
+}
+
+@media (min-width: 778px) {
+  .name-tag-small-max {
+    display: flex;
+  }
+}
+
+@media (max-width: 310px) {
+  .name-tag-small-min {
+    display: none;
+  }
+}
