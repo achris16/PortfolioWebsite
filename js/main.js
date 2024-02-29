@@ -34,8 +34,16 @@ function setFirstActiveLink() {
   }
 }
 
+function setCopyrightDate() {
+  let copyright = document.querySelector('#copyright');
+  const d = new Date();
+  let year = d.getFullYear();
+  copyright.innerText = `© ${year} Ani M`;
+}
+
 window.onload = (event) => {
   console.log("page is fully loaded");
+  setCopyrightDate();
   setFirstActiveLink();
   const navItems = document.querySelectorAll('.nav-item');
   for (item of navItems) {
