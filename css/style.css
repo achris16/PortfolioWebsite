@@ -218,11 +218,18 @@ section#about, section#portfolio {
 }
 
 .image-container {
-  height: 125px; 
+  flex: 0 0 auto;
   width: 125px;
   margin-right: 1rem;
   margin-bottom: 1rem;
 } 
+
+.image-container > img {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
 
 @media (max-width: 574px) {
   .about-container {
