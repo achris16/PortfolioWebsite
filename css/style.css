@@ -275,3 +275,14 @@ section#about, section#portfolio {
   }
 }
 
+section#portfolio .card-body:last-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+
+section#portfolio .card-body:last-of-type .card-link+.card-link {
+  margin-top: 0.5rem;
+  margin: 0;
+}
